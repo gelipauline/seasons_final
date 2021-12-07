@@ -6,7 +6,7 @@ var panels = []
 //let analyzer;
 
 function preload(){
-    song = loadSound ('summer.mp3')
+    song = loadSound ('baby.mp3')
 }
 
 function setup(){
@@ -15,10 +15,10 @@ function setup(){
     imageMode(CENTER)
     rectMode(CENTER)
     fft = new p5.FFT()
-    //mic = new p5.AudioIn();
-    //mic.start();
-    //fft.setInput(mic)
-    //input = new p5.AudioIn();
+    mic = new p5.AudioIn();
+    mic.start();
+    fft.setInput(mic)
+    input = new p5.AudioIn();
     //input.start();
     panels = new Panels(360)
     //img.filter(BLUR, 12)
